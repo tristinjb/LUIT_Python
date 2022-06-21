@@ -5,5 +5,5 @@ s3_resource.list_buckets()["Buckets"][0]["CreationDate"]
 creation_date=s3_resource.list_buckets()["Buckets"][0]["CreationDate"]
 creation_date.strftime("%d%m%y_%H:%M:%S")
 for buckets in s3_resource.list_buckets()["Buckets"]:
-    print("Buckets.names")
-    print("Buckets.creation_date")
+    print(buckets["Name"])
+    print(buckets["CreationDate"])
